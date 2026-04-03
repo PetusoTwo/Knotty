@@ -1,0 +1,111 @@
+---
+import ProductCard from "./ProductCard.astro";
+import { featuredProducts } from "../data/products";
+
+const masonryPattern = ["featured", "tall", "medium", "compact", "medium", "compact", "tall", "compact"];
+---
+
+<section id="catalogo" class="relative isolate overflow-hidden px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
+  <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_15%_20%,#E07BE026_0%,transparent_42%),radial-gradient(circle_at_85%_30%,#932F6D1F_0%,transparent_38%),linear-gradient(180deg,#F6F2FF_0%,#DCCCFF50_45%,#F6F2FF_100%)]"></div>
+  <div class="pointer-events-none absolute -left-20 top-16 -z-10 h-52 w-52 rounded-full bg-secondary/20 blur-3xl animate-catalog-float-a"></div>
+  <div class="pointer-events-none absolute right-4 bottom-14 -z-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl animate-catalog-float-b"></div>
+  <div class="pointer-events-none absolute right-[30%] bottom-24 -z-10 h-16 w-16 rounded-[61%_39%_43%_57%/51%_66%_34%_49%] border border-secondary/20 bg-white/20 animate-catalog-float-d"></div>
+
+  <div class="mx-auto w-full max-w-5xl">
+    <header class="grid items-end gap-4 lg:grid-cols-[1fr_auto]">
+      <div>
+        <p class="inline-flex items-center rounded-full border border-primary/20 bg-white/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-primary shadow-sm">
+          Galeria artesanal
+        </p>
+        <h2 class="mt-5 text-5xl sm:text-6xl leading-[0.95] text-dark">Nuestros amigurumis</h2>
+        <p class="mt-4 max-w-2xl text-base sm:text-lg text-dark/75">
+          Piezas unicas, tejidas con paciencia y cariño para que cada detalle se sienta especial.
+        </p>
+      </div>
+    </header>
+
+    <div class="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3">
+      {featuredProducts.map((product, index) => (
+        <div class="mb-6 break-inside-avoid">
+          <ProductCard product={product} index={index} variant={masonryPattern[index % masonryPattern.length]} />
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <a
+        href="/catalogo"
+        class="inline-flex items-center rounded-full bg-primary px-8 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-dark focus:outline-none focus:ring-2 focus:ring-primary/40"
+      >
+        Ver todos los amigurumis
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes catalog-float-a {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(10px, -8px, 0);
+    }
+  }
+
+  @keyframes catalog-float-b {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(-12px, 10px, 0);
+    }
+  }
+
+  @keyframes catalog-float-c {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate3d(8px, -6px, 0) rotate(5deg);
+    }
+  }
+
+  @keyframes catalog-float-d {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate3d(-7px, 6px, 0) rotate(-6deg);
+    }
+  }
+
+  .animate-catalog-float-a {
+    animation: catalog-float-a 12s ease-in-out infinite;
+  }
+
+  .animate-catalog-float-b {
+    animation: catalog-float-b 13s ease-in-out infinite;
+  }
+
+  .animate-catalog-float-c {
+    animation: catalog-float-c 14s ease-in-out infinite;
+  }
+
+  .animate-catalog-float-d {
+    animation: catalog-float-d 15s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-catalog-float-a,
+    .animate-catalog-float-b,
+    .animate-catalog-float-c,
+    .animate-catalog-float-d {
+      animation: none;
+    }
+  }
+</style>
