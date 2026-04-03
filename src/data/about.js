@@ -4,7 +4,7 @@ export const aboutContent = {
   paragraph:
     "Cada amigurumi nace de una idea real y se convierte en una pieza unica tejida con paciencia, ternura y muchisimo cariño.",
   story:
-    "Aqui no hacemos produccion en serie: creamos pequenos compañeros para recuerdos grandes.",
+    "Aqui no hacemos produccion en serie: creamos pequeños compañeros para recuerdos grandes.",
 };
 
 
