@@ -1,7 +1,7 @@
 export const footerContent = {
   brand: "Knotty",
   description:
-    "Empresa peruana que crea amigurumis hechos a mano con dedicacion, transformando ideas en piezas unicas llenas de carino.",
+    "Empresa peruana que crea amigurumis hechos a mano con dedicacion, transformando ideas en piezas unicas llenas de cariño.",
   tagline: "Siguenos en redes sociales para descubrir nuevas creaciones y ofertas especiales.",
   copyright: "© 2026 Knotty",
   location: "Hecho en Peru",
