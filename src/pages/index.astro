@@ -2,18 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CatalogSection from "../components/CatalogSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ContactSection from "../components/ContactSection.astro";
 ---
 
 <Layout title="Knotty | Amigurumis Mágicos">
   <Hero />
   <CatalogSection />
-  <section id="personalizacion" class="min-h-screen flex items-center justify-center">
-    <h2 class="text-4xl font-semibold">Personalización</h2>
-  </section>
-  <section id="nosotros" class="min-h-screen bg-soft/30 flex items-center justify-center">
-    <h2 class="text-4xl font-semibold">Sobre Knotty</h2>
-  </section>
-  <section id="contacto" class="min-h-screen flex items-center justify-center">
-    <h2 class="text-4xl font-semibold">Contacto por WhatsApp</h2>
-  </section>
+  <AboutSection />
+  <ContactSection />
 </Layout>
