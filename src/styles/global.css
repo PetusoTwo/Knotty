@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #932f6d;
+  --color-secondary: #e07be0;
+  --color-dark: #420039;
+  --color-soft: #dcccff;
+  --color-background: #f6f2ff;
+  
+  --font-fredoka: 'Fredoka', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-dark font-poppins antialiased min-h-screen;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-fredoka text-primary;
+  }
+}
