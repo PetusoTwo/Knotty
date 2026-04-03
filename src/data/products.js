@@ -77,7 +77,7 @@ export const featuredProducts = [
 
 export function buildProductWhatsAppUrl(productName) {
   const message = encodeURIComponent(
-    `Hola, estoy interesado en el amigurumi: ${productName}`,
+    `Hola! Me interesa el amigurumi: ${productName} 🧸`,
   );
   return `https://wa.me/${whatsappPhone}?text=${message}`;
 }
