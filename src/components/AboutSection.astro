@@ -1,0 +1,285 @@
+---
+import { aboutContent, aboutMedia } from "../data/about";
+
+const signature = aboutContent.signature ?? "";
+---
+
+<section id="nosotros" class="relative isolate overflow-hidden px-4 py-24 sm:px-6 sm:py-28 lg:px-10">
+  <div class="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_18%_18%,#E07BE033_0%,transparent_42%),radial-gradient(circle_at_84%_24%,#932F6D22_0%,transparent_38%),linear-gradient(165deg,#F6F2FF_4%,#EADCFD_44%,#F6F2FF_100%)]"></div>
+  <div class="pointer-events-none absolute -left-24 top-20 -z-20 h-64 w-64 rounded-full bg-secondary/20 blur-3xl animate-about-orbit-a"></div>
+  <div class="pointer-events-none absolute right-10 top-10 -z-20 h-56 w-56 rounded-full bg-primary/14 blur-3xl animate-about-orbit-b"></div>
+  <div class="pointer-events-none absolute right-[30%] bottom-16 -z-20 h-48 w-48 rounded-full bg-soft/55 blur-3xl animate-about-orbit-c"></div>
+
+  <div class="mx-auto w-full max-w-6xl">
+    <div class="space-y-8 lg:hidden">
+      <p class="about-reveal inline-flex rounded-full border border-primary/20 bg-white/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-primary shadow-sm backdrop-blur-sm">
+        {aboutContent.eyebrow}
+      </p>
+
+      <h2 class="about-reveal text-4xl sm:text-5xl leading-[0.92] text-dark whitespace-pre-line">
+        {aboutContent.title}
+      </h2>
+
+      <div class="about-reveal about-delay-1 relative z-20 mx-auto w-full max-w-md rounded-[2.2rem_1.8rem_2.4rem_1.9rem] border border-white/65 bg-white/60 p-3 shadow-2xl shadow-primary/15 backdrop-blur-sm">
+        <img
+          src={aboutMedia.main.src}
+          alt={aboutMedia.main.alt}
+          class="h-[320px] w-full rounded-[1.8rem_1.4rem_2rem_1.5rem] object-cover"
+          style={`object-position: ${aboutMedia.main.objectPosition};`}
+          loading="lazy"
+        />
+      </div>
+
+      <p class="about-reveal about-delay-1 max-w-[34ch] text-base sm:text-lg leading-relaxed text-dark/80">
+        {aboutContent.paragraph}
+      </p>
+
+      <p class="about-reveal about-delay-2 max-w-[34ch] text-sm sm:text-base leading-relaxed text-dark/70">
+        {aboutContent.story}
+      </p>
+
+      <div class="about-mobile-collage relative pt-2">
+        <svg class="about-thread-layer-mobile pointer-events-none absolute inset-0 z-0 h-full w-full" viewBox="0 0 800 520" fill="none" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M80 130C190 84 286 94 370 150C444 198 520 192 618 146" stroke="rgba(147,47,109,0.3)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 10" class="about-thread" />
+          <path d="M90 365C196 336 290 352 374 396C454 438 548 430 666 392" stroke="rgba(224,123,224,0.3)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 10" class="about-thread-delay" />
+        </svg>
+
+        <div class="relative z-20 grid grid-cols-2 gap-4">
+          <figure class="about-reveal about-delay-2 group rounded-[1.8rem_1.4rem_2rem_1.6rem] border border-white/70 bg-white/75 p-2.5 shadow-xl transition-all duration-500 hover:-translate-y-1 hover:-rotate-2">
+            <img
+              src={aboutMedia.floatA.src}
+              alt={aboutMedia.floatA.alt}
+              class="h-[170px] w-full rounded-[1.1rem_1.4rem_1rem_1.2rem] object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+              style={`object-position: ${aboutMedia.floatA.objectPosition};`}
+              loading="lazy"
+            />
+          </figure>
+
+          <figure class="about-reveal about-delay-3 group mt-8 rounded-[1.6rem_1.9rem_1.7rem_2rem] border border-white/70 bg-white/80 p-2 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:rotate-2">
+            <img
+              src={aboutMedia.floatC.src}
+              alt={aboutMedia.floatC.alt}
+              class="h-[145px] w-full rounded-[1rem_1.3rem_1.1rem_1.4rem] object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+              style={`object-position: ${aboutMedia.floatC.objectPosition};`}
+              loading="lazy"
+            />
+          </figure>
+
+          <figure class="about-reveal about-delay-4 group col-span-2 mx-auto w-[76%] rounded-[2rem_1.5rem_2.2rem_1.6rem] border border-white/70 bg-white/70 p-2.5 shadow-xl transition-all duration-500 hover:-translate-y-1 hover:rotate-2">
+            <img
+              src={aboutMedia.floatB.src}
+              alt={aboutMedia.floatB.alt}
+              class="h-[165px] w-full rounded-[1.3rem_1rem_1.4rem_1.1rem] object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+              style={`object-position: ${aboutMedia.floatB.objectPosition};`}
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <p class="about-reveal about-delay-4 text-right text-xl text-primary">{signature}</p>
+    </div>
+
+    <div class="relative hidden min-h-[720px] lg:block">
+      <p class="about-reveal absolute left-6 top-6 z-30 inline-flex rounded-full border border-primary/20 bg-white/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-primary shadow-sm backdrop-blur-sm">
+        {aboutContent.eyebrow}
+      </p>
+
+      <h2 class="about-reveal absolute left-8 top-28 z-30 text-7xl leading-[0.9] text-dark whitespace-pre-line">
+        {aboutContent.title}
+      </h2>
+
+      <p class="about-reveal about-delay-1 absolute left-10 top-[390px] z-30 max-w-[36ch] text-lg leading-relaxed text-dark/80">
+        {aboutContent.paragraph}
+      </p>
+
+      <p class="about-reveal about-delay-2 absolute left-10 top-[520px] z-30 max-w-[34ch] text-base leading-relaxed text-dark/70">
+        {aboutContent.story}
+      </p>
+
+      <figure class="about-reveal about-delay-1 group absolute right-8 top-12 z-20 w-[41%] rounded-[2.4rem_1.8rem_2.8rem_2rem] border border-white/65 bg-white/60 p-3 shadow-2xl shadow-primary/15 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:rotate-[1deg]">
+        <img
+          src={aboutMedia.main.src}
+          alt={aboutMedia.main.alt}
+          class="h-[360px] w-full rounded-[2rem_1.4rem_2.2rem_1.6rem] object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+          style={`object-position: ${aboutMedia.main.objectPosition};`}
+          loading="lazy"
+        />
+      </figure>
+
+      <figure class="about-reveal about-delay-2 group absolute left-[56%] top-[450px] z-20 w-[22%] rounded-[1.6rem_2.2rem_1.4rem_2rem] border border-white/70 bg-white/75 p-2.5 shadow-xl transition-all duration-500 hover:-translate-y-1 hover:-rotate-2">
+        <img
+          src={aboutMedia.floatA.src}
+          alt={aboutMedia.floatA.alt}
+          class="h-[180px] w-full rounded-[1.1rem_1.5rem_1rem_1.3rem] object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+          style={`object-position: ${aboutMedia.floatA.objectPosition};`}
+          loading="lazy"
+        />
+      </figure>
+
+      <figure class="about-reveal about-delay-3 group absolute left-[40%] top-[575px] z-20 w-[24%] rounded-[2rem_1.5rem_2.2rem_1.6rem] border border-white/70 bg-white/70 p-2.5 shadow-xl transition-all duration-500 hover:-translate-y-1 hover:rotate-2">
+        <img
+          src={aboutMedia.floatB.src}
+          alt={aboutMedia.floatB.alt}
+          class="h-[185px] w-full rounded-[1.3rem_1rem_1.4rem_1.1rem] object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+          style={`object-position: ${aboutMedia.floatB.objectPosition};`}
+          loading="lazy"
+        />
+      </figure>
+
+      <figure class="about-reveal about-delay-4 group absolute right-[6%] top-[520px] z-20 w-[18%] rounded-[1.5rem_1.9rem_1.7rem_2rem] border border-white/70 bg-white/80 p-2 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:-rotate-2">
+        <img
+          src={aboutMedia.floatC.src}
+          alt={aboutMedia.floatC.alt}
+          class="h-[140px] w-full rounded-[1rem_1.3rem_1.1rem_1.4rem] object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+          style={`object-position: ${aboutMedia.floatC.objectPosition};`}
+          loading="lazy"
+        />
+      </figure>
+
+      <svg class="about-thread-layer pointer-events-none absolute inset-0 z-10 h-full w-full" viewBox="0 0 1200 760" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M250 175C390 120 520 150 640 240C740 314 835 302 940 236" stroke="rgba(147,47,109,0.36)" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="7 10" class="about-thread" />
+        <path d="M180 545C322 492 438 510 540 566C654 624 772 610 918 548" stroke="rgba(224,123,224,0.34)" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="6 10" class="about-thread-delay" />
+      </svg>
+
+      <p class="about-reveal about-delay-4 absolute right-10 bottom-8 z-30 text-2xl text-primary">{signature}</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const aboutNodes = Array.from(document.querySelectorAll(".about-reveal"));
+
+  aboutNodes.forEach((node) => {
+    node.classList.add("about-hidden");
+  });
+
+  const aboutObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("about-show");
+          aboutObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16 },
+  );
+
+  aboutNodes.forEach((node) => aboutObserver.observe(node));
+</script>
+
+<style>
+  @keyframes about-orbit-a {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(12px, -9px, 0);
+    }
+  }
+
+  @keyframes about-orbit-b {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(-10px, 11px, 0);
+    }
+  }
+
+  @keyframes about-orbit-c {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(8px, -6px, 0);
+    }
+  }
+
+  @keyframes about-thread-flow {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -180;
+    }
+  }
+
+  .animate-about-orbit-a {
+    animation: about-orbit-a 13s ease-in-out infinite;
+  }
+
+  .animate-about-orbit-b {
+    animation: about-orbit-b 14s ease-in-out infinite;
+  }
+
+  .animate-about-orbit-c {
+    animation: about-orbit-c 12s ease-in-out infinite;
+  }
+
+  .about-thread {
+    animation: about-thread-flow 12s linear infinite;
+  }
+
+  .about-thread-delay {
+    animation: about-thread-flow 14s linear infinite reverse;
+  }
+
+  .about-hidden {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .about-show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .about-delay-1 {
+    transition-delay: 0.08s;
+  }
+
+  .about-delay-2 {
+    transition-delay: 0.14s;
+  }
+
+  .about-delay-3 {
+    transition-delay: 0.2s;
+  }
+
+  .about-delay-4 {
+    transition-delay: 0.28s;
+  }
+
+  @media (max-width: 1023px) {
+    .about-thread-layer-mobile {
+      opacity: 0.5;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-about-orbit-a,
+    .animate-about-orbit-b,
+    .animate-about-orbit-c,
+    .about-thread,
+    .about-thread-delay {
+      animation: none;
+    }
+
+    .about-hidden,
+    .about-show,
+    .about-delay-1,
+    .about-delay-2,
+    .about-delay-3,
+    .about-delay-4 {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
