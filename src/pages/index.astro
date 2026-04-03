@@ -1,11 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Knotty | Amigurumis Mágicos">
+  <Hero />
+  <section id="catalogo" class="min-h-screen bg-soft/30 flex items-center justify-center">
+    <h2 class="text-4xl font-semibold">Catálogo</h2>
+  </section>
+  <section id="personalizacion" class="min-h-screen flex items-center justify-center">
+    <h2 class="text-4xl font-semibold">Personalización</h2>
+  </section>
+  <section id="nosotros" class="min-h-screen bg-soft/30 flex items-center justify-center">
+    <h2 class="text-4xl font-semibold">Sobre Knotty</h2>
+  </section>
+  <section id="contacto" class="min-h-screen flex items-center justify-center">
+    <h2 class="text-4xl font-semibold">Contacto por WhatsApp</h2>
+  </section>
 </Layout>

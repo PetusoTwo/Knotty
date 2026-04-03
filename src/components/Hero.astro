@@ -1,0 +1,205 @@
+---
+import { heroContent, getHeroWhatsappLink } from "../data/hero";
+
+const whatsappHref = getHeroWhatsappLink();
+const imageObjectFit = heroContent.mainImage.objectFit ?? "cover";
+const imageObjectPosition = heroContent.mainImage.objectPosition ?? "center";
+---
+
+<section id="home" class="relative isolate overflow-hidden min-h-[100svh] px-4 sm:px-6 lg:px-10 pt-24 sm:pt-28 pb-24 sm:pb-16">
+    <div
+        class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_12%_20%,#E07BE066_0%,transparent_40%),radial-gradient(circle_at_86%_16%,#932F6D33_0%,transparent_38%),linear-gradient(140deg,#F6F2FF_10%,#DCCCFF_55%,#F6F2FF_92%)]">
+    </div>
+
+    <div
+        class="pointer-events-none absolute -left-16 top-24 -z-10 h-52 w-52 rounded-full bg-secondary/35 blur-3xl animate-blob-a">
+    </div>
+    <div
+        class="pointer-events-none absolute right-4 top-10 -z-10 h-44 w-44 rounded-full bg-primary/20 blur-3xl animate-blob-b">
+    </div>
+    <div
+        class="pointer-events-none absolute right-20 bottom-12 -z-10 h-56 w-56 rounded-full bg-soft/60 blur-3xl animate-blob-c">
+    </div>
+
+    <div class="pointer-events-none absolute left-[8%] top-[17%] -z-10 h-28 w-28 rounded-[34%_66%_63%_37%/41%_42%_58%_59%] border border-primary/12 bg-white/10 backdrop-blur-[2px] animate-shape-a"></div>
+    <div class="pointer-events-none absolute right-[11%] top-[30%] -z-10 h-20 w-20 rounded-[61%_39%_43%_57%/51%_66%_34%_49%] border border-secondary/20 bg-white/10 animate-shape-b"></div>
+    <div class="pointer-events-none absolute left-[42%] bottom-[12%] -z-10 h-24 w-24 rounded-[47%_53%_32%_68%/53%_39%_61%_47%] border border-primary/10 bg-white/10 animate-shape-c"></div>
+
+    <div class="mx-auto max-w-6xl min-h-[calc(100svh-12rem)] sm:min-h-[calc(100svh-11rem)] grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-12 items-center content-center">
+        <div class="relative">
+            <div
+                class="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/65 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-primary shadow-md backdrop-blur-sm">
+                <span class="h-2.5 w-2.5 rounded-full bg-primary animate-pulse"></span>
+                {heroContent.eyebrow}
+            </div>
+
+            <h1 class="mt-5 text-5xl sm:text-6xl lg:text-7xl leading-[0.95] text-dark drop-shadow-sm max-w-[13ch]">
+                {heroContent.title}
+            </h1>
+
+            <p class="mt-5 max-w-[52ch] text-base sm:text-lg leading-relaxed text-dark/80">
+                {heroContent.subtitle}
+            </p>
+
+            <div class="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+                <a href={heroContent.ctaPrimary.href}
+                    class="rounded-full bg-primary px-7 py-3 text-sm sm:text-base font-semibold text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-dark focus:outline-none focus:ring-2 focus:ring-primary/40">
+                    {heroContent.ctaPrimary.label}
+                </a>
+
+                <a href={whatsappHref} target="_blank" rel="noreferrer"
+                    class="rounded-full border border-primary/30 bg-white/70 px-7 py-3 text-sm sm:text-base font-semibold text-primary shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white focus:outline-none focus:ring-2 focus:ring-primary/40">
+                    {heroContent.ctaSecondary.label}
+                </a>
+            </div>
+
+            <!-- <div
+                class="mt-8 w-fit rounded-2xl border border-white/60 bg-white/55 px-4 py-3 text-xs sm:text-sm text-dark/75 shadow-md backdrop-blur-sm">
+                texto ejemplo
+            </div> -->
+        </div>
+
+        <div class="relative mx-auto w-full max-w-xl">
+            <div class="parallax-item relative rounded-[2rem] border border-white/60 bg-white/55 p-3 shadow-2xl shadow-primary/20 backdrop-blur-md"
+                data-parallax="0.08">
+                <div class="h-[320px] sm:h-[440px] lg:h-[500px] w-full rounded-[1.6rem] overflow-hidden bg-soft/45 shadow-lg">
+                    <img src={heroContent.mainImage.src} alt={heroContent.mainImage.alt}
+                        class="h-full w-full rounded-[1.6rem] shadow-lg" style={`object-fit: ${imageObjectFit}; object-position: ${imageObjectPosition};`}
+                        loading="eager" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    const parallaxElements = Array.from(document.querySelectorAll("[data-parallax]"));
+
+    const updateParallax = () => {
+        const y = window.scrollY;
+        parallaxElements.forEach((element) => {
+            const speed = Number(element.dataset.parallax || 0.05);
+            element.style.setProperty("--parallax-y", `${y * speed}px`);
+        });
+    };
+
+    window.addEventListener("scroll", updateParallax, { passive: true });
+    window.addEventListener("load", updateParallax);
+    updateParallax();
+</script>
+
+<style>
+    .parallax-item {
+        transform: translate3d(0, var(--parallax-y, 0px), 0);
+        transition: transform 180ms linear;
+        will-change: transform;
+    }
+
+    @keyframes blob-a {
+
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        50% {
+            transform: translate3d(10px, -12px, 0);
+        }
+    }
+
+    @keyframes blob-b {
+
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        50% {
+            transform: translate3d(-14px, 8px, 0);
+        }
+    }
+
+    @keyframes blob-c {
+
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        50% {
+            transform: translate3d(8px, -10px, 0);
+        }
+    }
+
+    .animate-blob-a {
+        animation: blob-a 9s ease-in-out infinite;
+    }
+
+    .animate-blob-b {
+        animation: blob-b 11s ease-in-out infinite;
+    }
+
+    .animate-blob-c {
+        animation: blob-c 10s ease-in-out infinite;
+    }
+
+    @keyframes shape-a {
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0) rotate(0deg);
+        }
+        50% {
+            transform: translate3d(8px, -6px, 0) rotate(5deg);
+        }
+    }
+
+    @keyframes shape-b {
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0) rotate(0deg);
+        }
+        50% {
+            transform: translate3d(-6px, 8px, 0) rotate(-4deg);
+        }
+    }
+
+    @keyframes shape-c {
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0) rotate(0deg);
+        }
+        50% {
+            transform: translate3d(7px, -5px, 0) rotate(4deg);
+        }
+    }
+
+    .animate-shape-a {
+        animation: shape-a 13s ease-in-out infinite;
+    }
+
+    .animate-shape-b {
+        animation: shape-b 15s ease-in-out infinite;
+    }
+
+    .animate-shape-c {
+        animation: shape-c 14s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .animate-blob-a,
+        .animate-blob-b,
+        .animate-blob-c,
+        .animate-shape-a,
+        .animate-shape-b,
+        .animate-shape-c {
+            animation: none;
+        }
+
+        .parallax-item {
+            transform: none;
+            transition: none;
+        }
+    }
+</style>
