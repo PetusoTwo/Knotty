@@ -1,0 +1,70 @@
+---
+import { footerContent, footerLinks, quickLinks } from "../data/footer";
+import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
+
+const socialItems = [
+  { label: "WhatsApp", href: footerLinks.whatsapp, icon: FaWhatsapp },
+  { label: "Instagram", href: footerLinks.instagram, icon: FaInstagram },
+  { label: "Facebook", href: footerLinks.facebook, icon: FaFacebook },
+];
+
+
+---
+
+<footer class="relative isolate overflow-hidden px-4 pt-14 pb-8 sm:px-6 sm:pt-16 lg:px-10">
+  <div class="absolute inset-0 -z-20 bg-primary"></div>
+  <div class="absolute inset-x-0 top-0 -z-10 h-px bg-white/25"></div>
+
+  <div class="mx-auto w-full max-w-6xl">
+    <div class="grid grid-cols-1 gap-10 text-center sm:gap-12 lg:grid-cols-3 lg:text-left">
+      <div class="space-y-4">
+        
+        <h2 class="text-4xl text-white">{footerContent.brand}</h2>
+        <p class="text-sm leading-relaxed text-white/80">
+          {footerContent.description}
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-white">Explora</h3>
+        <ul class="mt-4 space-y-3">
+          {quickLinks.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="inline-flex text-sm text-white/85 transition-all duration-300 hover:text-soft hover:translate-x-1"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-white">Siguenos</h3>
+        <div class="mt-4 flex items-center justify-center gap-3 lg:justify-start">
+          {socialItems.map((item) => (
+        <a
+            href={item.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={item.label}
+            class="grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-white/10 text-lg font-semibold text-white shadow-sm backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:text-soft"
+        >
+            <item.icon />
+        </a>
+        ))}
+
+        </div>
+        <p class="mt-4 text-sm text-white/80">{footerContent.tagline}</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/20 pt-5 text-center">
+      <p class="text-xs sm:text-sm text-white/80">
+        {footerContent.copyright} — {footerContent.location}
+      </p>
+    </div>
+  </div>
+</footer>
