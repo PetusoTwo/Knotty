@@ -10,22 +10,22 @@ export const aboutContent = {
 
 export const aboutMedia = {
   main: {
-    src: "/images/main.jpg",
+    src: "/images/about01.jpg",
     alt: "Amigurumi principal del universo Knotty.",
     objectPosition: "50% 34%",
   },
   floatA: {
-    src: "/images/main.jpg",
+    src: "/images/about02.jpg",
     alt: "Detalle de personaje tejido a mano.",
     objectPosition: "55% 28%",
   },
   floatB: {
-    src: "/images/amigurumi-main.jpg",
+    src: "/images/about03.jpg",
     alt: "Composicion de amigurumis artesanales.",
     objectPosition: "48% 36%",
   },
   floatC: {
-    src: "/images/main.jpg",
+    src: "/images/about04.jpg",
     alt: "Escena creativa de amigurumis en estudio.",
     objectPosition: "62% 40%",
   },
