@@ -15,7 +15,7 @@ export const featuredProducts = [
     precio: "S/42",
     imagen: "/images/02.jpg",
     descripcion: "Tonos dulces y acabado delicado hecho a mano.",
-    cta: "Pedir el mio",
+    cta: "Lo quiero",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const featuredProducts = [
     precio: "S/30",
     imagen: "/images/03.jpg",
     descripcion: "Pequeno, tierno y facil de llevar a cualquier lugar.",
-    cta: "Quiero este",
+    cta: "Lo quiero",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const featuredProducts = [
     precio: "S/22",
     imagen: "/images/05.jpg",
     descripcion: "Detalle artesanal ideal para sorprender con cariño.",
-    cta: "Pedir el mio",
+    cta: "Lo quiero",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ export const featuredProducts = [
     precio: "S/44",
     imagen: "/images/06.jpg",
     descripcion: "Costuras cuidadas y look adorable para coleccionar.",
-    cta: "Quiero este",
+    cta: "Lo quiero",
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ export const featuredProducts = [
     precio: "S/46",
     imagen: "/images/08.jpg",
     descripcion: "Ideal para decorar espacios con un toque artesanal.",
-    cta: "Pedir el mio",
+    cta: "Lo quiero",
   },
   {
     id: 9,
@@ -71,7 +71,7 @@ export const featuredProducts = [
     precio: "S/40",
     imagen: "/images/09.jpg",
     descripcion: "Un diseno divertido con personalidad unica.",
-    cta: "Quiero este",
+    cta: "Lo quiero",
   }
 ];
 
