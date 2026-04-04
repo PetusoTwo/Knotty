@@ -5,7 +5,7 @@ export const contactContent = {
     "Haz clic en una idea, y en Knotty la tejemos para ti punto a punto.",
   floatingIdeas: [
     "Quiero un Stitch",
-    "Un capibara porfa",
+    "Un capibara",
     "Algo unico...",
     "Un gatito tierno",
     "Un amigurumi de mi mascota",
