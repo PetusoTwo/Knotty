@@ -33,11 +33,17 @@ variant === "featured"
     <div class={`pointer-events-none absolute inset-0 -z-10 ${organicClass} bg-gradient-to-br ${accentClass}`}></div>
 
     <div
-        class="relative overflow-hidden rounded-[1.35rem] border border-white/70 bg-white/80 shadow-sm transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-[0.6deg]">
-        <img src={product.imagen} alt={`Placeholder ${product.nombre}.`} class={`w-full
-            object-cover transition-transform duration-700 group-hover:scale-[1.06] ${imageHeightClass}`}
+        class={`relative overflow-hidden rounded-[1.35rem] border border-white/70 bg-primary/5 shadow-sm transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-[0.6deg] ${imageHeightClass}`}>
+        
+        <!-- Loader / Skeleton -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="h-8 w-8 animate-spin rounded-full border-4 border-primary/10 border-t-primary/70"></div>
+        </div>
+
+        <img src={product.imagen} alt={`Amigurumi ${product.nombre}`} class="relative z-10 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
             loading="lazy" />
-        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-dark/20 to-transparent">
+            
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-16 bg-gradient-to-t from-dark/20 to-transparent">
         </div>
     </div>
 

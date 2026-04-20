@@ -115,7 +115,7 @@ export const featuredProducts = [
   },
   {
     id: 15,
-    nombre: "Osito tierno",
+    nombre: "Pingüino rosa adorable",
     precio: "S/40",
     imagen: "/images/16.jpeg",
     descripcion: "Un diseno divertido con personalidad unica.",
