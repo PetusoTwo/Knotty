@@ -3,6 +3,7 @@ import ProductCard from "./ProductCard.astro";
 import { featuredProducts } from "../data/products";
 
 const masonryPattern = ["featured", "tall", "medium", "compact", "medium", "compact", "tall", "compact"];
+const randomProducts = [...featuredProducts].sort(() => Math.random() - 0.5).slice(0, 9);
 ---
 
 <section id="catalogo" class="relative isolate overflow-hidden px-4 py-20 sm:px-6 sm:py-24 lg:px-10">
@@ -24,7 +25,7 @@ const masonryPattern = ["featured", "tall", "medium", "compact", "medium", "comp
     </header>
 
     <div class="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3">
-      {featuredProducts.map((product, index) => (
+      {randomProducts.map((product, index) => (
         <div class="mb-6 break-inside-avoid">
           <ProductCard product={product} index={index} variant={masonryPattern[index % masonryPattern.length]} />
         </div>
