@@ -20,7 +20,7 @@ export const featuredProducts = [
   {
     id: 3,
     nombre: "Virgencita de Guadalupe",
-    precio: "S/30",
+    precio: "S/55",
     imagen: "/images/03.png",
     descripcion: "Ideal para decorar espacios con un toque artesanal.",
     cta: "Lo quiero",
@@ -35,8 +35,8 @@ export const featuredProducts = [
   },
   {
     id: 5,
-    nombre: "Stitch pequeño",
-    precio: "S/22",
+    nombre: "Llavero Stitch pequeño",
+    precio: "S/10",
     imagen: "/images/05.png",
     descripcion: "Detalle artesanal ideal para sorprender con cariño. Llavero perfecto para regalar.",
     cta: "Lo quiero",
@@ -76,7 +76,8 @@ export const featuredProducts = [
   {
     id: 10,
     nombre: "Ramo de tulipanes",
-    precio: "S/40",
+    precioUnidad: "S/8",
+    precioDocena: "S/84",
     imagen: "/images/10.jpeg",
     descripcion: "Un ramo de tulipanes vibrantes y coloridos, perfecto para alegrar cualquier espacio con su belleza y encanto.",
     cta: "Lo quiero",
@@ -92,7 +93,7 @@ export const featuredProducts = [
   {
     id: 12,
     nombre: "Llavero de ositos",
-    precio: "S/40",
+    precio: "S/10",
     imagen: "/images/13.png",
     descripcion: "Un llavero de ositos encantadores, perfecto para llevar contigo un toque de ternura y alegría a donde vayas.",
     cta: "Lo quiero",
@@ -100,7 +101,7 @@ export const featuredProducts = [
   {
     id: 13,
     nombre: "Virgen de Guadalupe",
-    precio: "S/40",
+    precio: "S/22",
     imagen: "/images/14.jpeg",
     descripcion: "Virgen de guadalupe con personalidad unica, en otra version.",
     cta: "Lo quiero",
@@ -115,8 +116,8 @@ export const featuredProducts = [
   },
   {
     id: 15,
-    nombre: "Pingüino rosa adorable",
-    precio: "S/40",
+    nombre: "Llavero Pingüino rosa",
+    precio: "S/10",
     imagen: "/images/16.jpeg",
     descripcion: "Un diseno divertido con personalidad unica.",
     cta: "Lo quiero",
@@ -124,7 +125,7 @@ export const featuredProducts = [
   {
     id: 16,
     nombre: "LLavero de Elefante",
-    precio: "S/40",
+    precio: "S/10",
     imagen: "/images/17.jpeg",
     descripcion: "Un llavero de Elefante encantador, perfecto para llevar contigo.",
     cta: "Lo quiero",
@@ -132,7 +133,7 @@ export const featuredProducts = [
   {
     id: 17,
     nombre: "Chuckie Finster de Rugrats",
-    precio: "S/40",
+    precio: "S/80",
     imagen: "/images/18.jpeg",
     descripcion: "Un diseno de Chuckie Finster de los Rugrats.",
     cta: "Lo quiero",

@@ -52,7 +52,16 @@ variant === "featured"
         <p class="text-sm leading-relaxed text-dark/75 min-h-[2.5rem] flex-grow">
             {product.descripcion}
         </p>
-        <p class="text-xs font-medium tracking-wide text-primary/70 mt-auto">Desde {product.precio}</p>
+        <div class="mt-auto pt-1">
+            {product.precioUnidad && product.precioDocena ? (
+                <div class="flex items-center justify-between text-xs font-semibold tracking-wide text-primary/80">
+                    <span>Unidad: {product.precioUnidad}</span>
+                    <span>Docena: {product.precioDocena}</span>
+                </div>
+            ) : (
+                <p class="text-xs font-medium tracking-wide text-primary/70">Desde {product.precio}</p>
+            )}
+        </div>
     </div>
 
     <a href={whatsappHref} target="_blank" rel="noreferrer"
