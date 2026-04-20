@@ -4,7 +4,7 @@ export const featuredProducts = [
   {
     id: 1,
     nombre: "Tulipan Rosa",
-    precio: "S/35",
+    precio: "S/20",
     imagen: "/images/01.png",
     descripcion: "Suave y delicado, perfecto para decorar tu hogar.",
     cta: "Lo quiero",
@@ -12,7 +12,7 @@ export const featuredProducts = [
   {
     id: 2,
     nombre: "Conejita Tierna",
-    precio: "S/42",
+    precio: "S/15",
     imagen: "/images/02.png",
     descripcion: "Tonos dulces y acabado delicado hecho a mano.",
     cta: "Lo quiero",
@@ -28,7 +28,7 @@ export const featuredProducts = [
   {
     id: 4,
     nombre: "Rosa",
-    precio: "S/48",
+    precio: "S/20",
     imagen: "/images/04.png",
     descripcion: "Un diseño único y encantador que te enamorará.",
     cta: "Lo quiero",
@@ -44,7 +44,7 @@ export const featuredProducts = [
   {
     id: 6,
     nombre: "Osito en canasta",
-    precio: "S/44",
+    precio: "S/20",
     imagen: "/images/06.png",
     descripcion: "Costuras cuidadas y look adorable.",
     cta: "Lo quiero",
@@ -52,7 +52,7 @@ export const featuredProducts = [
   {
     id: 7,
     nombre: "Pequeña planta suculenta",
-    precio: "S/28",
+    precio: "S/20",
     imagen: "/images/07.png",
     descripcion: "Textura suave y delicada, ideal para decorar espacios.",
     cta: "Lo quiero",
@@ -60,7 +60,7 @@ export const featuredProducts = [
   {
     id: 8,
     nombre: "Oso tierno con canasta",
-    precio: "S/46",
+    precio: "S/20",
     imagen: "/images/08.png",
     descripcion: "Ideal para decorar espacios con un toque artesanal.",
     cta: "Lo quiero",
@@ -68,7 +68,7 @@ export const featuredProducts = [
   {
     id: 9,
     nombre: "Girasol amarillo",
-    precio: "S/40",
+    precio: "S/20",
     imagen: "/images/09.png",
     descripcion: "Un diseno divertido con personalidad unica, perfecto para alegrar cualquier espacio.",
     cta: "Lo quiero",
@@ -85,7 +85,7 @@ export const featuredProducts = [
   {
     id: 11,
     nombre: "Flores variadas",
-    precio: "S/40",
+    precio: "S/20",
     imagen: "/images/12.png",
     descripcion: "Un diseno divertido con personalidad unica.",
     cta: "Lo quiero",
@@ -109,7 +109,7 @@ export const featuredProducts = [
   {
     id: 14,
     nombre: "Flor blanca",
-    precio: "S/40",
+    precio: "S/20",
     imagen: "/images/15.png",
     descripcion: "Un diseno divertido con personalidad unica.",
     cta: "Lo quiero",
